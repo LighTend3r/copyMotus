@@ -8,12 +8,12 @@ import java.util.Random;
 
 public class Motus {
 	private String currentWord;
-	private final String fileBDD = "bdd/word.txt";
+	private final String fileBDD = "bdd/word2.txt";
 
 	//private Joueur joueur;
 	
 	public Motus() {
-		this.currentWord="banane";
+		this.currentWord="BANANE";
 	}
 	
 	public String[] check(String checkWord) {
@@ -22,6 +22,9 @@ public class Motus {
 		 * F = False (false) (existe pas)
 		 * A = Almost (exite mais pas a la bonen place
 		 */
+		checkWord = checkWord.toUpperCase();
+		currentWord = currentWord.toUpperCase();
+		
 		if(checkWord.length() != this.currentWord.length()) {
 			System.out.println("Le nombre de caractère est différent, c'est impossible !!");
 			return null;
@@ -72,8 +75,8 @@ public class Motus {
 		FileReader file = new FileReader(fileBDD);
 		BufferedReader buffer = new BufferedReader(file);
 		Random r = new Random();
-		int ligne =  r.nextInt(76424);
-		for (int i = 0; i < 76424; i++) {
+		int ligne =  r.nextInt(7146);
+		for (int i = 0; i < 7146; i++) {
 			String mot = buffer.readLine();
 			if (i == ligne) {
 				this.currentWord = mot;

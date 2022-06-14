@@ -3,79 +3,63 @@
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
-	minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0"
-	prefWidth="550.0" styleClass="parent" stylesheets="@stylesheet.css"
-	xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
-	>
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="550.0" styleClass="parent" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
 	<children>
-		<HBox alignment="CENTER_LEFT" maxHeight="-Infinity"
-			maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-			prefHeight="90.0" prefWidth="550" styleClass="dark-panel">
+		<HBox fx:id="hbox" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="550" styleClass="dark-panel">
 			<padding>
 				<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
 			</padding>
 			<children>
-				<Button fx:id="homeButton" alignment="CENTER"
-					contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity"
-					minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
-					onAction="#homePress" prefHeight="65.0" prefWidth="65.0"
-					styleClass="main-btns-selected" text="Button">
+				<Button fx:id="homeButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#homePress" prefHeight="65.0" prefWidth="65.0" styleClass="main-btns-selected" text="Button">
 					<graphic>
-						<FontAwesomeIconView fx:id="homeIcone"
-							glyphName="HOME" size="35" styleClass="selected" />
+						<FontAwesomeIconView fx:id="homeIcone" glyphName="HOME" size="35" styleClass="selected" />
 					</graphic>
 				</Button>
-				<Button fx:id="joueurButton" alignment="CENTER"
-					contentDisplay="CENTER" layoutX="20.0" layoutY="18.0"
-					maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
-					minWidth="-Infinity" mnemonicParsing="false"
-					onAction="#joueurPress" prefHeight="65.0" prefWidth="65.0"
-					styleClass="main-btns" text="Button">
+				<Button fx:id="joueurButton" alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#joueurPress" prefHeight="65.0" prefWidth="65.0" styleClass="main-btns" text="Button">
 					<HBox.margin>
 						<Insets left="85.0" />
 					</HBox.margin>
 					<graphic>
-						<FontAwesomeIconView fx:id="joueurIcone"
-							glyphName="USER" size="35" styleClass="icons" />
+						<FontAwesomeIconView fx:id="joueurIcone" glyphName="USER" size="35" styleClass="icons" />
 					</graphic>
 				</Button>
-				<Button fx:id="leaderboardButton" alignment="CENTER"
-					contentDisplay="CENTER" layoutX="20.0" layoutY="18.0"
-					maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
-					minWidth="-Infinity" mnemonicParsing="false"
-					onAction="#leaderBoardPress" prefHeight="65.0" prefWidth="65.0"
-					styleClass="main-btns" text="Button">
+				<Button fx:id="leaderboardButton" alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#leaderBoardPress" prefHeight="65.0" prefWidth="65.0" styleClass="main-btns" text="Button">
 					<HBox.margin>
 						<Insets left="85.0" />
 					</HBox.margin>
 					<graphic>
-						<FontAwesomeIconView fx:id="leaderboardIcone"
-							glyphName="TROPHY" size="35" styleClass="icons" />
+						<FontAwesomeIconView fx:id="leaderboardIcone" glyphName="TROPHY" size="35" styleClass="icons" />
 					</graphic>
 				</Button>
-				<Button fx:id="statButton" alignment="CENTER"
-					contentDisplay="CENTER" layoutX="85.0" layoutY="18.0"
-					maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
-					minWidth="-Infinity" mnemonicParsing="false" onAction="#statPress"
-					prefHeight="65.0" prefWidth="65.0" styleClass="main-btns"
-					text="Button">
+				<Button fx:id="statButton" alignment="CENTER" contentDisplay="CENTER" layoutX="85.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#statPress" prefHeight="65.0" prefWidth="65.0" styleClass="main-btns" text="Button">
 					<HBox.margin>
 						<Insets left="85.0" />
 					</HBox.margin>
 					<graphic>
-						<FontAwesomeIconView fx:id="statIcone"
-							glyphName="BAR_CHART" size="35" styleClass="icons" />
+						<FontAwesomeIconView fx:id="statIcone" glyphName="BAR_CHART" size="35" styleClass="icons" />
 					</graphic>
 				</Button>
 			</children>
 		</HBox>
-		<Pane fx:id="currentPane" layoutY="95.0" maxHeight="-Infinity"
-			maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-			prefHeight="445.0" prefWidth="550" />
+		<Pane fx:id="currentPane" layoutY="95.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="445.0" prefWidth="550" />
+				<AnchorPane fx:id="anchorPaneFin" layoutX="60.0" layoutY="130.0" prefHeight="328.0" prefWidth="430.0" style="-fx-background-color: #071e26; -fx-background-radius: 20px;" visible="false">
+					<children>
+						<Label fx:id="labelWin" layoutX="135.0" layoutY="48.0" style="-fx-font-size: 30px;" text="You WIN !!" textAlignment="CENTER" textFill="WHITE" />
+            <Label fx:id="lableTentative" layoutX="44.0" layoutY="113.0" prefHeight="16.0" prefWidth="286.0" text="Tentative : 1" textFill="WHITE" />
+            <Button fx:id="buttonRejouer" layoutX="173.0" layoutY="234.0" mnemonicParsing="false" onAction="#rejouer" prefHeight="36.0" prefWidth="84.0" text="Rejouer" />
+					</children>
+				</AnchorPane>
+      <AnchorPane fx:id="anchorPaneFin1" layoutX="70.0" layoutY="140.0" prefHeight="328.0" prefWidth="430.0" style="-fx-background-color: #071e26; -fx-background-radius: 20px;" visible="false">
+         <children>
+            <Label fx:id="labelLose" layoutX="126.0" layoutY="48.0" style="-fx-font-size: 30px;" text="You LOSE !!" textAlignment="CENTER" textFill="WHITE" />
+            <Label fx:id="labelMot" layoutX="44.0" layoutY="113.0" prefHeight="16.0" prefWidth="286.0" text="Le mot était : BANANE" textFill="WHITE" />
+            <Button fx:id="buttonRejouer1" layoutX="173.0" layoutY="234.0" mnemonicParsing="false" onAction="#rejouer" prefHeight="36.0" prefWidth="84.0" text="Rejouer" />
+         </children>
+      </AnchorPane>
 	</children>
 </AnchorPane>
